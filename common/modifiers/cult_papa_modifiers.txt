@@ -1,0 +1,16 @@
+﻿cult_papa_lunar_blessing = {
+	icon = prestige_positive
+	monthly_prestige = 0.25
+}
+
+cult_papa_moons_gaze = {
+	icon = stress_negative
+	monthly_income = -0.1
+	stress_gain_mult = 0.05
+}
+
+cult_papa_memory_of_the_knight = {
+	icon = prestige_positive
+	monthly_prestige = 0.1
+	same_culture_opinion = 5
+}

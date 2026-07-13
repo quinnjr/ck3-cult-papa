@@ -1,0 +1,23 @@
+﻿# Hooks Ser Papa's arrival into the vanilla yearly pulse.
+# Fires at most once per campaign (gated by the cult_papa_has_visited global variable).
+
+yearly_playable_pulse = {
+	on_actions = {
+		cult_papa_yearly_pulse
+	}
+}
+
+cult_papa_yearly_pulse = {
+	trigger = {
+		is_ai = no
+		is_adult = yes
+		is_landed = yes
+		highest_held_title_tier >= tier_kingdom
+		NOT = { has_global_variable = cult_papa_has_visited }
+	}
+	random_events = {
+		# ~10% chance each year once the trigger is met, so the visit lands on a random date.
+		chance_to_happen = 10
+		100 = cult_papa.0001
+	}
+}

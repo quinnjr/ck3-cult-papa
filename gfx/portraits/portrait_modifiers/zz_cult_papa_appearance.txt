@@ -1,0 +1,43 @@
+﻿# Forces Ser Cult Papa's look: bright coppery-red hair and a full straight beard.
+# create_character cannot assign DNA, so this is the vanilla-sanctioned route:
+# a portrait modifier keyed on the is_cult_papa character flag (set in his
+# scripted character template's after_creation).
+#
+# hair_color replace coordinates are normalized 0-1 over gfx/portraits/hair_palette.dds:
+# x = redness, y = darkness. (0.94, 0.37) ~ palette pixel (240, 95), a bright ginger.
+# The beard inherits the hair_color gene, so the beard is red too.
+cult_papa_appearance = {
+	usage = game
+	selection_behavior = max
+
+	cult_papa_look = {
+		dna_modifiers = {
+			color = {
+				mode = replace
+				gene = hair_color
+				x = 0.94
+				y = 0.37
+			}
+			accessory = {
+				mode = replace
+				gene = hairstyles
+				template = western_hairstyles_straight
+				value = 0.7
+			}
+			accessory = {
+				mode = replace
+				gene = beards
+				template = western_beards_straight
+				value = 1.0
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000
+				exists = this
+				has_character_flag = is_cult_papa
+			}
+		}
+	}
+}

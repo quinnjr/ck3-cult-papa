@@ -1,0 +1,233 @@
+﻿namespace = cult_papa
+
+##################################################
+# cult_papa.0001 - Ser Cult Papa arrives at your court,
+# squire in tow, sworn against the Moon
+##################################################
+cult_papa.0001 = {
+	type = character_event
+	title = cult_papa.0001.t
+	desc = cult_papa.0001.desc
+	theme = court
+
+	left_portrait = {
+		character = scope:cult_papa
+		animation = personality_zealous
+	}
+	right_portrait = {
+		character = scope:cult_papa_squire
+		animation = shame
+	}
+
+	trigger = {
+		is_ai = no
+		is_adult = yes
+		is_landed = yes
+		highest_held_title_tier >= tier_kingdom
+		NOT = { has_global_variable = cult_papa_has_visited }
+	}
+
+	immediate = {
+		set_global_variable = {
+			name = cult_papa_has_visited
+			value = yes
+		}
+		create_character = {
+			template = cult_papa_character_template
+			location = root.capital_province
+			save_scope_as = cult_papa
+		}
+		create_character = {
+			template = cult_papa_squire_template
+			location = root.capital_province
+			save_scope_as = cult_papa_squire
+		}
+	}
+
+	# Take the knight and his squire into your service
+	option = {
+		name = cult_papa.0001.a
+		add_courtier = scope:cult_papa
+		add_courtier = scope:cult_papa_squire
+		scope:cult_papa = {
+			set_knight_status = force
+		}
+		trigger_event = {
+			id = cult_papa.0002
+			days = { 30 90 }
+		}
+	}
+
+	# Fund the war against the Moon
+	option = {
+		name = cult_papa.0001.b
+		remove_short_term_gold = 25
+		add_prestige = 100
+		add_character_modifier = {
+			modifier = cult_papa_lunar_blessing
+			years = 10
+		}
+	}
+
+	# Throw him out
+	option = {
+		name = cult_papa.0001.c
+		add_stress = 15
+		add_character_modifier = {
+			modifier = cult_papa_moons_gaze
+			years = 5
+		}
+	}
+}
+
+##################################################
+# cult_papa.0002 - He tilts at the capital windmill,
+# certain it is one of the Moon's earthly engines
+##################################################
+cult_papa.0002 = {
+	type = character_event
+	title = cult_papa.0002.t
+	desc = cult_papa.0002.desc
+	theme = court
+
+	left_portrait = {
+		character = scope:cult_papa
+		animation = pain
+	}
+	right_portrait = {
+		character = scope:cult_papa_squire
+		animation = worry
+	}
+
+	trigger = {
+		exists = scope:cult_papa
+		scope:cult_papa = {
+			is_alive = yes
+			is_courtier_of = root
+		}
+	}
+
+	# Pay the miller for the damages
+	option = {
+		name = cult_papa.0002.a
+		remove_short_term_gold = 5
+		trigger_event = {
+			id = cult_papa.0003
+			days = { 60 180 }
+		}
+	}
+
+	# Declare the mill officially defeated
+	option = {
+		name = cult_papa.0002.b
+		add_prestige = 25
+		stress_impact = {
+			base = -10
+		}
+		trigger_event = {
+			id = cult_papa.0003
+			days = { 60 180 }
+		}
+	}
+}
+
+##################################################
+# cult_papa.0003 - The vigil: he demands to be knighted
+# properly, keeping watch over his armor until moonrise
+##################################################
+cult_papa.0003 = {
+	type = character_event
+	title = cult_papa.0003.t
+	desc = cult_papa.0003.desc
+	theme = faith
+
+	left_portrait = {
+		character = scope:cult_papa
+		animation = prayer
+	}
+
+	trigger = {
+		exists = scope:cult_papa
+		scope:cult_papa = {
+			is_alive = yes
+			is_courtier_of = root
+		}
+	}
+
+	# Knight him with full solemnity
+	option = {
+		name = cult_papa.0003.a
+		add_prestige = 50
+		scope:cult_papa = {
+			add_prestige = 100
+		}
+		trigger_event = {
+			id = cult_papa.0004
+			years = { 5 12 }
+		}
+	}
+
+	# Humor him with a quick tap of the blade
+	option = {
+		name = cult_papa.0003.b
+		add_prestige = 10
+		trigger_event = {
+			id = cult_papa.0004
+			years = { 5 12 }
+		}
+	}
+}
+
+##################################################
+# cult_papa.0004 - The Knight Wakes: fever, lucidity,
+# and a quiet end to the war against the Moon
+##################################################
+cult_papa.0004 = {
+	type = character_event
+	title = cult_papa.0004.t
+	desc = cult_papa.0004.desc
+	theme = death
+
+	left_portrait = {
+		character = scope:cult_papa
+		animation = severelywounded
+	}
+	right_portrait = {
+		character = scope:cult_papa_squire
+		animation = grief
+	}
+
+	trigger = {
+		exists = scope:cult_papa
+		scope:cult_papa = {
+			is_alive = yes
+			is_courtier_of = root
+		}
+	}
+
+	option = {
+		name = cult_papa.0004.a
+		add_prestige = 50
+		add_character_modifier = {
+			modifier = cult_papa_memory_of_the_knight
+			years = 20
+		}
+	}
+
+	option = {
+		name = cult_papa.0004.b
+		add_stress = 10
+		add_character_modifier = {
+			modifier = cult_papa_memory_of_the_knight
+			years = 20
+		}
+	}
+
+	after = {
+		scope:cult_papa = {
+			death = {
+				death_reason = death_natural_causes
+			}
+		}
+	}
+}

@@ -1,0 +1,52 @@
+﻿cult_papa_character_template = {
+	age = { 45 55 }
+	gender = male
+	# Spawn him as a local so the portrait/clothes fit the player's realm.
+	culture = root.culture
+	faith = root.faith
+	dynasty = none
+	random_traits = no
+	name = cult_papa_name
+
+	martial = { 6 10 }
+	diplomacy = { 4 7 }
+	intrigue = { 1 3 }
+	stewardship = { 1 3 }
+	learning = { 8 12 }
+	prowess = { 14 18 }
+
+	trait = lunatic_1
+	trait = brave
+	trait = honest
+	trait = lifestyle_blademaster
+
+	after_creation = {
+		# Drives the forced red hair + beard in
+		# gfx/portraits/portrait_modifiers/zz_cult_papa_appearance.txt
+		add_character_flag = is_cult_papa
+		# Vanilla portrait modifiers down-weight random beard/hairstyle rolls
+		# for characters with this flag.
+		add_character_flag = has_scripted_appearance
+	}
+}
+
+cult_papa_squire_template = {
+	age = { 30 40 }
+	gender = male
+	culture = root.culture
+	faith = root.faith
+	dynasty = none
+	random_traits = no
+	name = cult_papa_squire_name
+
+	martial = { 2 5 }
+	diplomacy = { 5 8 }
+	intrigue = { 3 6 }
+	stewardship = { 7 10 }
+	learning = { 2 4 }
+	prowess = { 3 6 }
+
+	trait = gluttonous
+	trait = content
+	trait = honest
+}
