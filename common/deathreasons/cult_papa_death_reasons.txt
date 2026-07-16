@@ -1,0 +1,3 @@
+﻿death_cult_papa_lunacy = {
+	public_knowledge = yes
+}

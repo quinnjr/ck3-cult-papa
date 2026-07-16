@@ -15,7 +15,7 @@ rival, the Moon.
 
 - **`cult_papa.0001` — The Ingenious Knight of the Waning Moon.** Recruit him and PapaLaCroix,
   fund the emprise (25 gold for prestige and *Patron of the Lunar War*), or throw him out
-  (*The Moon's Gaze*).
+  (*The Moon's Gaze* — and the moon-madness chain below).
 - **`cult_papa.0002` — The Giant of the Mill.** He tilts at your capital's windmill,
   certain it is one of the Moon's earthly engines; a jealous enchanter is blamed for
   the transformation. Someone should pay the miller.
@@ -43,6 +43,14 @@ rival, the Moon.
   arrives a year on from Governor PapaLaCroix: a hill named the keep, a goat named
   Ser Cult Papa, and a cup raised each month when the Moon dies its little death.
 
+Turning the knight away has a price. Under *The Moon's Gaze*, **`cult_papa.0020` —
+What the Knight Knew** fires a year or three later: the clear nights get to you, and
+you may go lunatic (35% if you resist, 65% if you compose "one formal insult, purely
+to know how it feels"). If the madness takes hold, **`cult_papa.0021` — The Moon
+Collects** follows, and can kill you — 35% if you answer the enemy in person from the
+tower, 15% if you bar the shutters — with a bespoke death reason: *died of
+moon-madness, at moonrise, mid-insult*.
+
 While the knight lives at your court, a yearly pulse (~25%) also fires one of three
 repeatable gags: **`cult_papa.0010` — The Enemy in the Pond** (a midnight cavalry
 charge into the fishpond; the enemy is routed, but amphibious), **`cult_papa.0011` —
@@ -60,8 +68,10 @@ ck3-cult-papa/
 │   ├── on_action/cult_papa_on_actions.txt          # yearly_playable_pulse hook + random-date gate
 │   ├── scripted_character_templates/cult_papa_templates.txt   # the knight and PapaLaCroix
 │   ├── nicknames/cult_papa_nicknames.txt           # "the Moonsbane"
+│   ├── traits/cult_papa_traits.txt                 # the Shitposter trait
+│   ├── deathreasons/cult_papa_death_reasons.txt    # death by moon-madness
 │   └── modifiers/cult_papa_modifiers.txt
-├── events/cult_papa_events.txt                     # namespace cult_papa, events 0001–0012
+├── events/cult_papa_events.txt                     # namespace cult_papa, events 0001–0021
 ├── gfx/portraits/portrait_modifiers/zz_cult_papa_appearance.txt  # forced red hair + full beard
 └── localization/english/cult_papa_l_english.yml    # localization
 ```

@@ -64,6 +64,18 @@
  cult_papa.0012.a:0 "Let the record show: one moon, unhorsed, in open combat. Wine for the victor!"
  cult_papa.0012.b:0 "Compensate my champion. And have every shield in the armory painted matte."
 
+ cult_papa.0020.t:0 "What the Knight Knew"
+ cult_papa.0020.desc:0 "It has been years since you had the mad knight removed from your hall, and you have thought of him seldom, and only on clear nights.\n\nThe nights have been very clear lately.\n\nIt began with small things. The tides, arriving and departing without your leave. The way cheese spoils if left out overnight, which no one has ever adequately explained. The moonlight that finds the gap in any shutter, however well-fitted — your carpenters have been spoken to, and protest their innocence, and you believe them, which is worse.\n\nLast night your chamberlain found you at the great window at moonrise. You do not remember going to the window. You remember only that you had been composing something in your head — a document of some kind, a formal document, with numbered articles — and that the eleventh article was #EMP the general insolence of its face#!.\n\nSomewhere on a road, in his great-grandfather's rusted armor, a hedge knight tried to warn you."
+ cult_papa.0020.a:0 "I am tired. That is all. Have the shutters seen to. Again."
+ cult_papa.0020.b:0 "Compose one formal insult. One. Purely to know how it feels."
+
+ cult_papa.0021.t:0 "The Moon Collects"
+ cult_papa.0021.desc:0 "The guards no longer remark upon it. Their [ROOT.Char.GetLadyLord] walks the battlements at moonrise; this is simply a thing that is true now, like the tides.\n\nTonight they found you on the highest tower, delivering a formal insult of your own composition — unnumbered, unsealed, unwitnessed by any herald, and, you privately concede, inferior work. The enemy hung there through all of it, pale and patient and insolent of face, dragging its seas about in jealousy, exactly as described.\n\nYou have begun making calculations. The enemy's weight: considerable. Its garrison: none that you can observe. Ladders required: one, but of very great length. You recognize these figures. You had them thrown out of your hall once, along with the man who made them.\n\nHe asked only for a sovereign with the greatness of soul to share so high an emprise. You have become one at last, alone, at the top of a tower, at moonrise, and the enemy is #EMP looking at you#!."
+ cult_papa.0021.a:0 "The tower, then. It is rude to keep an enemy waiting."
+ cult_papa.0021.b:0 "Bar the shutters. Double the guard. It cannot have me indoors."
+
+ death_cult_papa_lunacy:0 "died of moon-madness, at moonrise, mid-insult"
+
  cult_papa_lunar_blessing:0 "Patron of the Lunar War"
  cult_papa_lunar_blessing_desc:0 "You have funded Ser Cult Papa's high emprise against the Moon. Word of your greatness of soul — or something — spreads."
 

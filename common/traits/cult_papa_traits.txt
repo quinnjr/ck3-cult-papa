@@ -1,4 +1,4 @@
-cult_papa_shitposter = {
+﻿cult_papa_shitposter = {
 	# No custom art; borrow a vanilla icon that reads as "loudly sociable".
 	icon = "gfx/interface/icons/traits/gregarious.dds"
 
