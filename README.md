@@ -39,6 +39,16 @@ rival, the Moon.
 - **`cult_papa.0004` — The Knight Wakes.** Years later a fever breaks, lucidity returns,
   the quest is gently renounced, and the war against the Moon ends. You keep the
   *Memory of the Moon Knight* — and may, at last, find PapaLaCroix his island.
+- **`cult_papa.0008` — A Letter from the Island.** If you granted the island, word
+  arrives a year on from Governor PapaLaCroix: a hill named the keep, a goat named
+  Ser Cult Papa, and a cup raised each month when the Moon dies its little death.
+
+While the knight lives at your court, a yearly pulse (~25%) also fires one of three
+repeatable gags: **`cult_papa.0010` — The Enemy in the Pond** (a midnight cavalry
+charge into the fishpond; the enemy is routed, but amphibious), **`cult_papa.0011` —
+The Interrogation of the Owl** (eleven hours of silence; clearly a professional), and
+**`cult_papa.0012` — The Tourney of the Silver Shield** (your champion's polished
+shield is unhorsed and taken prisoner of war).
 
 ## Layout
 
@@ -51,7 +61,7 @@ ck3-cult-papa/
 │   ├── scripted_character_templates/cult_papa_templates.txt   # the knight and PapaLaCroix
 │   ├── nicknames/cult_papa_nicknames.txt           # "the Moonsbane"
 │   └── modifiers/cult_papa_modifiers.txt
-├── events/cult_papa_events.txt                     # namespace cult_papa, events 0001–0007
+├── events/cult_papa_events.txt                     # namespace cult_papa, events 0001–0012
 ├── gfx/portraits/portrait_modifiers/zz_cult_papa_appearance.txt  # forced red hair + full beard
 └── localization/english/cult_papa_l_english.yml    # localization
 ```
@@ -72,6 +82,10 @@ ck3-cult-papa/
   `common/on_action/cult_papa_on_actions.txt`.
 - The visit is once-per-campaign, gated by the `cult_papa_has_visited` global variable.
   Clear it in console with `effect remove_global_variable = cult_papa_has_visited` to re-arm.
+- The repeatable flavor events (0010–0012) require the `cult_papa_knight` character
+  variable, set on the player when the knight is recruited in `cult_papa.0001` and
+  cleared on his death in `cult_papa.0004`. They won't fire from console on a save
+  where he was never recruited.
 
 ## Notes for extending
 

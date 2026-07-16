@@ -4,6 +4,28 @@
 yearly_playable_pulse = {
 	on_actions = {
 		cult_papa_yearly_pulse
+		cult_papa_flavor_pulse
+	}
+}
+
+# Repeatable court gags while Ser Cult Papa lives at the player's
+# court (the cult_papa_knight variable is set when he is recruited
+# in cult_papa.0001 and cleared on his death in cult_papa.0004).
+cult_papa_flavor_pulse = {
+	trigger = {
+		is_ai = no
+		has_variable = cult_papa_knight
+		var:cult_papa_knight = {
+			is_alive = yes
+			is_courtier_of = root
+		}
+	}
+	random_events = {
+		# ~25% a year: roughly one lunar incident every four years.
+		chance_to_happen = 25
+		100 = cult_papa.0010
+		100 = cult_papa.0011
+		100 = cult_papa.0012
 	}
 }
 

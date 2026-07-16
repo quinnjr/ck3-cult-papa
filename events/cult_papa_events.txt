@@ -52,6 +52,12 @@ cult_papa.0001 = {
 		scope:cult_papa = {
 			set_knight_status = force
 		}
+		# The yearly flavor pulse can't see event-chain scopes,
+		# so remember the knight on the player.
+		set_variable = {
+			name = cult_papa_knight
+			value = scope:cult_papa
+		}
 		trigger_event = {
 			id = cult_papa.0002
 			days = { 30 90 }
@@ -395,13 +401,181 @@ cult_papa.0004 = {
 			modifier = cult_papa_memory_of_the_knight
 			years = 20
 		}
+		trigger_event = {
+			id = cult_papa.0008
+			days = { 300 600 }
+		}
 	}
 
 	after = {
+		if = {
+			limit = { has_variable = cult_papa_knight }
+			remove_variable = cult_papa_knight
+		}
 		scope:cult_papa = {
 			death = {
 				death_reason = death_natural_causes
 			}
 		}
+	}
+}
+
+##################################################
+# cult_papa.0008 - A letter from the island.
+# Fired only from cult_papa.0004 option c.
+##################################################
+cult_papa.0008 = {
+	type = character_event
+	title = cult_papa.0008.t
+	desc = cult_papa.0008.desc
+	theme = diplomacy
+
+	left_portrait = {
+		character = scope:cult_papa_squire
+		animation = happiness
+	}
+
+	trigger = {
+		exists = scope:cult_papa_squire
+		scope:cult_papa_squire = { is_alive = yes }
+	}
+
+	# Read it to the court at moonrise
+	option = {
+		name = cult_papa.0008.a
+		add_prestige = 25
+		stress_impact = {
+			base = -10
+		}
+	}
+
+	# File it with the war ledger
+	option = {
+		name = cult_papa.0008.b
+		stress_impact = {
+			base = -5
+		}
+	}
+}
+
+##################################################
+# Flavor events 0010-0012: repeatable gags while
+# the knight lives at court. Fired by the yearly
+# cult_papa_flavor_pulse; the knight is fetched
+# from the cult_papa_knight variable.
+##################################################
+
+# The Enemy in the Pond
+cult_papa.0010 = {
+	type = character_event
+	title = cult_papa.0010.t
+	desc = cult_papa.0010.desc
+	theme = court
+
+	left_portrait = {
+		character = scope:cult_papa
+		animation = pain
+	}
+
+	trigger = {
+		has_variable = cult_papa_knight
+		var:cult_papa_knight = {
+			is_alive = yes
+			is_courtier_of = root
+		}
+	}
+
+	immediate = {
+		var:cult_papa_knight = { save_scope_as = cult_papa }
+	}
+
+	option = {
+		name = cult_papa.0010.a
+		add_prestige = 10
+		stress_impact = {
+			base = -5
+		}
+	}
+
+	option = {
+		name = cult_papa.0010.b
+		stress_impact = {
+			base = -5
+		}
+	}
+}
+
+# The Interrogation of the Owl
+cult_papa.0011 = {
+	type = character_event
+	title = cult_papa.0011.t
+	desc = cult_papa.0011.desc
+	theme = intrigue
+
+	left_portrait = {
+		character = scope:cult_papa
+		animation = scheme
+	}
+
+	trigger = {
+		has_variable = cult_papa_knight
+		var:cult_papa_knight = {
+			is_alive = yes
+			is_courtier_of = root
+		}
+	}
+
+	immediate = {
+		var:cult_papa_knight = { save_scope_as = cult_papa }
+	}
+
+	option = {
+		name = cult_papa.0011.a
+		add_prestige = 10
+	}
+
+	option = {
+		name = cult_papa.0011.b
+		stress_impact = {
+			base = -10
+		}
+	}
+}
+
+# The Tourney of the Silver Shield
+cult_papa.0012 = {
+	type = character_event
+	title = cult_papa.0012.t
+	desc = cult_papa.0012.desc
+	theme = court
+
+	left_portrait = {
+		character = scope:cult_papa
+		animation = happiness
+	}
+
+	trigger = {
+		has_variable = cult_papa_knight
+		var:cult_papa_knight = {
+			is_alive = yes
+			is_courtier_of = root
+		}
+	}
+
+	immediate = {
+		var:cult_papa_knight = { save_scope_as = cult_papa }
+	}
+
+	option = {
+		name = cult_papa.0012.a
+		add_prestige = 25
+		scope:cult_papa = {
+			add_prestige = 50
+		}
+	}
+
+	option = {
+		name = cult_papa.0012.b
+		remove_short_term_gold = 5
 	}
 }

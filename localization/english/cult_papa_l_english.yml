@@ -41,6 +41,26 @@
 
  nick_cult_papa_the_moonsbane:0 "the Moonsbane"
 
+ cult_papa.0008.t:0 "A Letter from the Island"
+ cult_papa.0008.desc:0 "A letter arrives, sealed with wax into which someone has carefully pressed a thumbnail sketch of a goat.\n\n\"To my [ROOT.Char.GetLadyLord], from PapaLaCroix, Governor of the Island, greetings.\n\nThe island is small, but it is an island, whatever the fishermen here say about the tide. I govern well, I think. There is a hill I have named the keep, a stream I have named the moat, and a goat I have named Ser Cult Papa, because he is old, and fearless, and butts his head against things far larger than himself.\n\nEach month, when the Moon dies its little death, I raise a cup to the man who killed it first. The habit of the formal insult has proved harder to break — I deliver one from the hill at moonrise, most nights. Shorter than the herald's. He was always the better craftsman, my cousin.\n\nPostscript: no one here believes a word of my stories.\n\nPostscript the second: the Moon looks smaller from my island than it ever did from your tower. I count this a victory, and I know he would too.\""
+ cult_papa.0008.a:0 "Have it read to the court at moonrise, herald's rates, family discount."
+ cult_papa.0008.b:0 "File it with the war ledger, under 'islands: promised, one; delivered, one.'"
+
+ cult_papa.0010.t:0 "The Enemy in the Pond"
+ cult_papa.0010.desc:0 "You are woken a little after midnight by the sound of a full cavalry charge terminating in your fishpond.\n\nThe guards fish out Ser Cult Papa, soaked to the beard and entirely satisfied. The Moon, he explains, had descended into the pond — he had watched it settle upon the water with his own eyes, plainly exhausted from its climb across the sky, and no knight worthy of the name lets a tired enemy rest. He struck before it could rise. It shattered before his lance.\n\nThat it has since reassembled itself upon the surface of the water does not trouble him. \"It is routed,\" he says, wringing out his surcoat with dignity. \"Routed, but amphibious. Note that down.\"\n\nThe carp, reportedly, will not come out from under the lilies."
+ cult_papa.0010.a:0 "Have the pond dragged for lunar survivors. Be thorough."
+ cult_papa.0010.b:0 "Fetch the man a towel and a hot wine. The war is fought on many fronts."
+
+ cult_papa.0011.t:0 "The Interrogation of the Owl"
+ cult_papa.0011.desc:0 "Your spymaster's report named owls among the Moon's confirmed agents, and Ser Cult Papa is not a man to let intelligence go unacted upon. He has captured one.\n\nHe has been interrogating it in the stables since yesterday evening. Servants report that the questioning has been rigorous but honorable: the owl has been offered bread, water, and the chance to save itself by naming its handlers. It has said nothing. It has said nothing for eleven hours.\n\n\"You understand what this means,\" Ser Cult Papa tells you gravely, as the owl swivels its head entirely around to watch a mouse. \"An amateur would have talked by now. We are dealing with a professional.\"\n\nHe intends to release it with the honors of war, on the grounds that so disciplined an enemy deserves nothing less. The owl bites him at the moment of release, which he accepts as correct protocol, professional to the last."
+ cult_papa.0011.a:0 "Release the prisoner with full honors. Courage must be answered with courtesy."
+ cult_papa.0011.b:0 "I will hear the owl's testimony myself. Bring me a chair."
+
+ cult_papa.0012.t:0 "The Tourney of the Silver Shield"
+ cult_papa.0012.desc:0 "An incident at the practice yard. Your finest household knight — younger, stronger, tourney-proven — took the tilt against old Ser Cult Papa as a courtesy, carrying his best shield: polished silver, blinding in the sun.\n\nA mistake. The old knight saw that pale round disc gleaming atop a charging foe and understood, at last, that the enemy had grown bold enough to take the field in person. Witnesses say they have never seen a lance couched with such conviction. Your champion was lifted from the saddle and deposited in the tilt-yard mud, where he sat for some time, reconsidering.\n\nSer Cult Papa was gracious in victory. To the fallen knight he offered a hand up and his sincere apologies, for the man could hardly have known what he carried. The shield itself he has confiscated as a prisoner of war. It hangs in the stables, where Moonbane, fiercest destrier in creation, keeps guard over it, mostly by sleeping."
+ cult_papa.0012.a:0 "Let the record show: one moon, unhorsed, in open combat. Wine for the victor!"
+ cult_papa.0012.b:0 "Compensate my champion. And have every shield in the armory painted matte."
+
  cult_papa_lunar_blessing:0 "Patron of the Lunar War"
  cult_papa_lunar_blessing_desc:0 "You have funded Ser Cult Papa's high emprise against the Moon. Word of your greatness of soul — or something — spreads."
 
