@@ -41,6 +41,9 @@
 
  nick_cult_papa_the_moonsbane:0 "the Moonsbane"
 
+ trait_cult_papa_shitposter:0 "Shitposter"
+ trait_cult_papa_shitposter_desc:0 "This character maintains a nightly correspondence of formal insults, delivered at moonrise from the highest available architecture, addressed to an enemy who cannot read. The insults are numbered, sealed, and entered into the official ledger. The enemy has never once responded, which is taken as proof that the campaign is working."
+
  cult_papa.0008.t:0 "A Letter from the Island"
  cult_papa.0008.desc:0 "A letter arrives, sealed with wax into which someone has carefully pressed a thumbnail sketch of a goat.\n\n\"To my [ROOT.Char.GetLadyLord], from PapaLaCroix, Governor of the Island, greetings.\n\nThe island is small, but it is an island, whatever the fishermen here say about the tide. I govern well, I think. There is a hill I have named the keep, a stream I have named the moat, and a goat I have named Ser Cult Papa, because he is old, and fearless, and butts his head against things far larger than himself.\n\nEach month, when the Moon dies its little death, I raise a cup to the man who killed it first. The habit of the formal insult has proved harder to break — I deliver one from the hill at moonrise, most nights. Shorter than the herald's. He was always the better craftsman, my cousin.\n\nPostscript: no one here believes a word of my stories.\n\nPostscript the second: the Moon looks smaller from my island than it ever did from your tower. I count this a victory, and I know he would too.\""
  cult_papa.0008.a:0 "Have it read to the court at moonrise, herald's rates, family discount."
@@ -66,6 +69,9 @@
 
  cult_papa_moons_gaze:0 "The Moon's Gaze"
  cult_papa_moons_gaze_desc:0 "You turned away the one knight who tried to warn you. Now, on clear nights, you cannot shake the feeling that the Moon is watching you specifically."
+
+ cult_papa_squires_anxiety:0 "The Squire's Anxiety"
+ cult_papa_squires_anxiety_desc:0 "Someone in this company has to worry about the miller's fence, the herald's fee, the ledger, the ladder, and whether anyone remembered to feed Moonbane. That someone is PapaLaCroix, and he is worrying about all of them right now."
 
  cult_papa_at_war_with_the_moon:0 "At War with the Moon"
  cult_papa_at_war_with_the_moon_desc:0 "Your realm is in a formally declared state of war with the Moon. Grievances are read aloud from the highest tower at every moonrise. No engagements have yet been fought, save one, which is disputed. Morale is, frankly, excellent."

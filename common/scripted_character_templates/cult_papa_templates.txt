@@ -19,6 +19,7 @@
 	trait = brave
 	trait = honest
 	trait = lifestyle_blademaster
+	trait = cult_papa_shitposter
 
 	after_creation = {
 		# Drives the forced red hair + beard in
@@ -49,4 +50,12 @@ cult_papa_squire_template = {
 	trait = gluttonous
 	trait = content
 	trait = honest
+
+	after_creation = {
+		# Somebody in this outfit has to do the worrying.
+		add_character_modifier = {
+			modifier = cult_papa_squires_anxiety
+		}
+		add_stress = 35
+	}
 }

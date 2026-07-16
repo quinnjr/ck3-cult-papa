@@ -1,0 +1,13 @@
+cult_papa_shitposter = {
+	# No custom art; borrow a vanilla icon that reads as "loudly sociable".
+	icon = "gfx/interface/icons/traits/gregarious.dds"
+
+	diplomacy = 2
+	intrigue = 1
+
+	monthly_prestige = 0.1
+	courtier_and_guest_opinion = 5
+	clergy_opinion = -5
+
+	shown_in_ruler_designer = no
+}

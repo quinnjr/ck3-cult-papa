@@ -9,6 +9,11 @@ cult_papa_moons_gaze = {
 	stress_gain_mult = 0.05
 }
 
+cult_papa_squires_anxiety = {
+	icon = stress_negative
+	stress_gain_mult = 0.25
+}
+
 cult_papa_at_war_with_the_moon = {
 	icon = prestige_positive
 	monthly_prestige = 0.2
