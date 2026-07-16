@@ -162,8 +162,8 @@ cult_papa.0003 = {
 			add_prestige = 100
 		}
 		trigger_event = {
-			id = cult_papa.0004
-			years = { 5 12 }
+			id = cult_papa.0005
+			days = { 100 300 }
 		}
 	}
 
@@ -172,8 +172,167 @@ cult_papa.0003 = {
 		name = cult_papa.0003.b
 		add_prestige = 10
 		trigger_event = {
+			id = cult_papa.0005
+			days = { 100 300 }
+		}
+	}
+}
+
+##################################################
+# cult_papa.0005 - He demands the realm formally
+# declare war on the Moon, in writing, with seals
+##################################################
+cult_papa.0005 = {
+	type = character_event
+	title = cult_papa.0005.t
+	desc = cult_papa.0005.desc
+	theme = diplomacy
+
+	left_portrait = {
+		character = scope:cult_papa
+		animation = personality_bold
+	}
+	right_portrait = {
+		character = scope:cult_papa_squire
+		animation = worry
+	}
+
+	trigger = {
+		exists = scope:cult_papa
+		scope:cult_papa = {
+			is_alive = yes
+			is_courtier_of = root
+		}
+	}
+
+	# Seal the declaration with full ceremony
+	option = {
+		name = cult_papa.0005.a
+		add_prestige = 50
+		add_character_modifier = {
+			modifier = cult_papa_at_war_with_the_moon
+			years = 20
+		}
+		trigger_event = {
+			id = cult_papa.0006
+			days = { 200 600 }
+		}
+	}
+
+	# Refuse to sign
+	option = {
+		name = cult_papa.0005.b
+		add_prestige = 10
+		trigger_event = {
+			id = cult_papa.0006
+			days = { 200 600 }
+		}
+	}
+}
+
+##################################################
+# cult_papa.0006 - A lunar eclipse. Three nights
+# earlier, he shot an arrow at the Moon.
+##################################################
+cult_papa.0006 = {
+	type = character_event
+	title = cult_papa.0006.t
+	desc = cult_papa.0006.desc
+	theme = faith
+
+	left_portrait = {
+		character = scope:cult_papa
+		animation = happiness
+	}
+	right_portrait = {
+		character = scope:cult_papa_squire
+		animation = fear
+	}
+
+	trigger = {
+		exists = scope:cult_papa
+		scope:cult_papa = {
+			is_alive = yes
+			is_courtier_of = root
+		}
+	}
+
+	# A moon died tonight. Feast.
+	option = {
+		name = cult_papa.0006.a
+		remove_short_term_gold = 10
+		add_prestige = 75
+		stress_impact = {
+			base = -20
+		}
+		scope:cult_papa = {
+			add_prestige = 200
+			give_nickname = nick_cult_papa_the_moonsbane
+		}
+		trigger_event = {
+			id = cult_papa.0007
+			years = { 1 3 }
+		}
+	}
+
+	# It appears to have gotten better
+	option = {
+		name = cult_papa.0006.b
+		add_prestige = 10
+		trigger_event = {
+			id = cult_papa.0007
+			years = { 1 3 }
+		}
+	}
+}
+
+##################################################
+# cult_papa.0007 - The court has gone native.
+# The Lunar War Council awaits its sovereign.
+##################################################
+cult_papa.0007 = {
+	type = character_event
+	title = cult_papa.0007.t
+	desc = cult_papa.0007.desc
+	theme = court
+
+	left_portrait = {
+		character = scope:cult_papa
+		animation = scheme
+	}
+	right_portrait = {
+		character = scope:cult_papa_squire
+		animation = shame
+	}
+
+	trigger = {
+		exists = scope:cult_papa
+		scope:cult_papa = {
+			is_alive = yes
+			is_courtier_of = root
+		}
+	}
+
+	# Take your seat at the head of the table
+	option = {
+		name = cult_papa.0007.a
+		add_prestige = 50
+		stress_impact = {
+			base = -10
+		}
+		trigger_event = {
 			id = cult_papa.0004
-			years = { 5 12 }
+			years = { 3 8 }
+		}
+	}
+
+	# Cancel the ladder
+	option = {
+		name = cult_papa.0007.b
+		add_gold = 5
+		trigger_event = {
+			id = cult_papa.0004
+			years = { 3 8 }
 		}
 	}
 }
@@ -217,6 +376,21 @@ cult_papa.0004 = {
 	option = {
 		name = cult_papa.0004.b
 		add_stress = 10
+		add_character_modifier = {
+			modifier = cult_papa_memory_of_the_knight
+			years = 20
+		}
+	}
+
+	# There was never any island. There is now.
+	option = {
+		name = cult_papa.0004.c
+		remove_short_term_gold = 50
+		add_prestige = 100
+		scope:cult_papa_squire = {
+			add_gold = 50
+			add_prestige = 200
+		}
 		add_character_modifier = {
 			modifier = cult_papa_memory_of_the_knight
 			years = 20

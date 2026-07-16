@@ -6,7 +6,7 @@ raves about his sworn quest to destroy the Moon.
 
 ## What it does
 
-A Don Quixote arc in four events. Once per campaign, on a random year (~10% chance per
+A Don Quixote arc in seven events. Once per campaign, on a random year (~10% chance per
 year once you hold a kingdom or empire title), a provincial gentleman who read too many
 chivalric romances and astronomical treatises arrives at your court as a self-invented
 knight-errant, riding a swaybacked nag he calls *Moonbane*, squire PapaLaCroix in tow. He
@@ -22,9 +22,23 @@ rival, the Moon.
 - **`cult_papa.0003` — The Vigil of the Pale Foe.** His original knighting was performed
   by an innkeeper, so he stands a proper vigil over his arms until moonrise and asks
   you to do it right.
+- **`cult_papa.0005` — A Formal Declaration of War.** He points out the realm has been
+  prosecuting hostilities without declaring them. A document addressed to *The Moon,
+  Usurper of the Night, Dragger of Seas, Occupant of the Sky* awaits your seal
+  (*At War with the Moon*). A herald — PapaLaCroix's cousin — is retained to read it
+  from the tower at every moonrise.
+- **`cult_papa.0006` — The Night the Moon Died.** Three nights after he shoots an arrow
+  at the Moon, a lunar eclipse. He accepts the garrison's apologies, earns the nickname
+  *the Moonsbane*, and — when the enemy recovers — explains that the Moon is a dynasty
+  and this has been a war of succession all along.
+- **`cult_papa.0007` — The Lunar War Council.** Years in, the court has gone native:
+  the physician prescribes against moonlight, the marshal has siege plans blocked on a
+  ladder, the spymaster tracks the Moon's agents (the tides, several owls, one specific
+  cat), and Quartermaster-General PapaLaCroix keeps the ledger. Arrows loosed: one.
+  Hits: disputed.
 - **`cult_papa.0004` — The Knight Wakes.** Years later a fever breaks, lucidity returns,
   the quest is gently renounced, and the war against the Moon ends. You keep the
-  *Memory of the Moon Knight*.
+  *Memory of the Moon Knight* — and may, at last, find PapaLaCroix his island.
 
 ## Layout
 
@@ -35,8 +49,9 @@ ck3-cult-papa/
 ├── common/
 │   ├── on_action/cult_papa_on_actions.txt          # yearly_playable_pulse hook + random-date gate
 │   ├── scripted_character_templates/cult_papa_templates.txt   # the knight and PapaLaCroix
+│   ├── nicknames/cult_papa_nicknames.txt           # "the Moonsbane"
 │   └── modifiers/cult_papa_modifiers.txt
-├── events/cult_papa_events.txt                     # namespace cult_papa, events 0001–0004
+├── events/cult_papa_events.txt                     # namespace cult_papa, events 0001–0007
 ├── gfx/portraits/portrait_modifiers/zz_cult_papa_appearance.txt  # forced red hair + full beard
 └── localization/english/cult_papa_l_english.yml    # localization
 ```
@@ -64,5 +79,5 @@ ck3-cult-papa/
   lexer error for every file without one. Localization uses the `_l_english.yml` suffix.
 - `create_character` cannot assign DNA; forced appearance is done via a portrait
   modifier (`dna_modifiers` keyed on the `is_cult_papa` character flag).
-- New events go in `events/` under the `cult_papa` namespace (`cult_papa.0003`, ...).
+- New events go in `events/` under the `cult_papa` namespace (`cult_papa.0008`, ...).
 - `supported_version` in the two `.mod` files is set to `1.19.*` — bump as CK3 updates.
