@@ -6,39 +6,38 @@ raves about his sworn quest to destroy the Moon.
 
 ## What it does
 
-A Don Quixote arc in seven events. Once per campaign, on a random year (~10% chance per
-year once you hold a kingdom or empire title), a provincial gentleman who read too many
-chivalric romances and astronomical treatises arrives at your court as a self-invented
-knight-errant, riding a swaybacked nag he calls *Moonbane*, squire PapaLaCroix in tow. He
-serves the Lady Conspiracy Dearest — the Dawn herself — and has sworn to bring down her pale usurping
-rival, the Moon.
+A Don Quixote arc. Once per campaign, on a random year (~10% chance per year once you
+hold a kingdom or empire title), a provincial gentleman who read too many chivalric
+romances and astronomical treatises arrives at your court as a self-invented
+knight-errant, riding a swaybacked nag he calls *Moonbane*, squire PapaLaCroix in tow.
+He serves the Lady Conspiracy Dearest (the Dawn herself) and has sworn to bring down
+her pale usurping rival, the Moon.
 
 - **`cult_papa.0001` — The Ingenious Knight of the Waning Moon.** Recruit him and PapaLaCroix,
   fund the emprise (25 gold for prestige and *Patron of the Lunar War*), or throw him out
-  (*The Moon's Gaze* — and the moon-madness chain below).
+  (*The Moon's Gaze*, which arms the moon-madness chain below).
 - **`cult_papa.0002` — The Giant of the Mill.** He tilts at your capital's windmill,
-  certain it is one of the Moon's earthly engines; a jealous enchanter is blamed for
-  the transformation. Someone should pay the miller.
+  certain it is one of the Moon's earthly engines, and blames a jealous enchanter for
+  the transformation. You can pay the miller or declare the mill defeated.
 - **`cult_papa.0003` — The Vigil of the Pale Foe.** His original knighting was performed
   by an innkeeper, so he stands a proper vigil over his arms until moonrise and asks
   you to do it right.
 - **`cult_papa.0005` — A Formal Declaration of War.** He points out the realm has been
   prosecuting hostilities without declaring them. A document addressed to *The Moon,
   Usurper of the Night, Dragger of Seas, Occupant of the Sky* awaits your seal
-  (*At War with the Moon*). A herald — PapaLaCroix's cousin — is retained to read it
-  from the tower at every moonrise.
+  (*At War with the Moon*). A herald, who happens to be PapaLaCroix's cousin, is
+  retained to read it from the tower at every moonrise.
 - **`cult_papa.0006` — The Night the Moon Died.** Three nights after he shoots an arrow
   at the Moon, a lunar eclipse. He accepts the garrison's apologies, earns the nickname
-  *the Moonsbane*, and — when the enemy recovers — explains that the Moon is a dynasty
+  *the Moonsbane*, and, when the enemy recovers, explains that the Moon is a dynasty
   and this has been a war of succession all along.
-- **`cult_papa.0007` — The Lunar War Council.** Years in, the court has gone native:
+- **`cult_papa.0007` — The Lunar War Council.** Years in, the whole court has bought in:
   the physician prescribes against moonlight, the marshal has siege plans blocked on a
   ladder, the spymaster tracks the Moon's agents (the tides, several owls, one specific
-  cat), and Quartermaster-General PapaLaCroix keeps the ledger. Arrows loosed: one.
-  Hits: disputed.
-- **`cult_papa.0004` — The Knight Wakes.** Years later a fever breaks, lucidity returns,
-  the quest is gently renounced, and the war against the Moon ends. You keep the
-  *Memory of the Moon Knight* — and may, at last, find PapaLaCroix his island.
+  cat), and Quartermaster-General PapaLaCroix keeps the ledger.
+- **`cult_papa.0004` — The Knight Wakes.** Years later a fever breaks his madness, he
+  renounces the quest, and the war against the Moon ends. You keep the *Memory of the
+  Moon Knight*, and one option finally grants PapaLaCroix his island.
 - **`cult_papa.0008` — A Letter from the Island.** If you granted the island, word
   arrives a year on from Governor PapaLaCroix: a hill named the keep, a goat named
   Ser Cult Papa, and a cup raised each month when the Moon dies its little death.
@@ -47,16 +46,16 @@ Turning the knight away has a price. Under *The Moon's Gaze*, **`cult_papa.0020`
 What the Knight Knew** fires a year or three later: the clear nights get to you, and
 you may go lunatic (35% if you resist, 65% if you compose "one formal insult, purely
 to know how it feels"). If the madness takes hold, **`cult_papa.0021` — The Moon
-Collects** follows, and can kill you — 35% if you answer the enemy in person from the
-tower, 15% if you bar the shutters — with a bespoke death reason: *died of
+Collects** follows and can kill you (35% if you answer the enemy in person from the
+tower, 15% if you bar the shutters), with a bespoke death reason: *died of
 moon-madness, at moonrise, mid-insult*.
 
 While the knight lives at your court, a yearly pulse (~25%) also fires one of three
-repeatable gags: **`cult_papa.0010` — The Enemy in the Pond** (a midnight cavalry
-charge into the fishpond; the enemy is routed, but amphibious), **`cult_papa.0011` —
-The Interrogation of the Owl** (eleven hours of silence; clearly a professional), and
-**`cult_papa.0012` — The Tourney of the Silver Shield** (your champion's polished
-shield is unhorsed and taken prisoner of war).
+repeatable gags: **`cult_papa.0010` — The Enemy in the Pond** (he charges the Moon's
+reflection in your fishpond), **`cult_papa.0011` — The Interrogation of the Owl** (he
+questions a captured enemy agent for eleven hours), and **`cult_papa.0012` — The
+Tourney of the Silver Shield** (he unhorses your champion over a polished shield and
+takes the shield prisoner).
 
 ## Layout
 
