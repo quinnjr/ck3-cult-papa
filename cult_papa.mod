@@ -6,4 +6,5 @@ tags={
 }
 name="The Moon Must Fall: Ser Cult Papa the Hedge Knight"
 supported_version="1.19.*"
-path="mod/ck3-cult-papa"
+path="/home/joseph/.local/share/Paradox Interactive/Crusader Kings III/mod/ck3-cult-papa"
+remote_file_id="3766130998"
